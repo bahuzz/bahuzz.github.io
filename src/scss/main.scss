@@ -1,5 +1,7 @@
 @import 'reset.scss';
-
+html {
+	font-family: 'PT Sans', sans-serif;
+}
 body {
     background: #F2F2F2;
     font-family: 'PT Sans', sans-serif;
@@ -10,7 +12,7 @@ h1 {
 	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-bottom: 35px;
+	margin-bottom: 31px;
 }
 h2 {
 	font-size: 21px;
@@ -28,7 +30,7 @@ h2 {
 	position: relative;
 	height: 360px;
 	background: url(../img/header.jpg) 0 56px no-repeat;
-	margin-bottom: 110px;
+	margin-bottom: 106px;
 }
 .logo {
 	background: url(../img/logo.png) 0 0 no-repeat;
@@ -55,19 +57,24 @@ h2 {
 		text-decoration: none;
 	}
 	li {
-		padding: 20px 70px;
+		padding: 20px 69px;
+	}
+}
+.topmenu-left {
+	li {
+		padding-left: 92px;
 	}
 }
 .top {
 	text-align: center;
-	margin-bottom: 65px;
+	margin-bottom: 63px;
 }
 .page-descr {
 	text-transform: uppercase;
 	color: #333;
 	max-width: 450px;
 	margin: auto;
-	line-height: 1.5em;
+	line-height: 1.6em;
 }
 .content {
 	padding: 0 120px;
@@ -88,7 +95,16 @@ h2 {
 	border-left: 1px solid #dbdbdb;
 }
 .section {
-	margin-bottom: 70px;
+	margin-bottom: 68px;
+}
+.section-contact {
+	margin-bottom: 54px;
+}
+.section-mem {
+	margin-bottom: 46px;
+}
+.section-emo {
+	margin-bottom: 66px;
 }
 .radio-input {
 	display: none;
@@ -113,7 +129,7 @@ h2 {
 	margin-right: 20px;
 }
 .radio-block {
-	margin-bottom: 20px;
+	margin-top: 20px;
 	padding-left: 4px;
 	padding-top: 2px;
 }
@@ -125,7 +141,7 @@ h2 {
 	padding-left: 80px;
 }
 .input-block {
-	margin-bottom: 20px;
+	margin-top: 20px;
 	display: flex;
 	-webkit-align-items: center;
 	        align-items: center;
@@ -143,6 +159,7 @@ h2 {
 	font-size: 18px;
 	font-weight: bold;
 	color: #000;
+	font-family: 'PT Sans', sans-serif;
 	&:focus {
 		background: #fff;
 		outline: none;
@@ -156,8 +173,9 @@ h2 {
 }
 .page-title-h2 {
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 55px;
 	position: relative;
+	line-height: 1.2em;
 	&:before {
 		content: "";
 		position: absolute;
@@ -177,6 +195,7 @@ h2 {
 		top: 50%;
 		width: 100%;
 		height: 1px;
+		margin-top: -1px;
 		background: #dbdbdb;
 		display: block;
 		z-index: 1;
@@ -187,6 +206,12 @@ h2 {
 		display: inline-block;
 		max-width: 300px;
 	}
+}
+.title-mem {
+	margin-bottom: 41px;
+}
+.title-emo {
+	margin-bottom: 58px;
 }
 .btn {
 	height: 58px;
@@ -200,13 +225,13 @@ h2 {
 .input-text-wrapper {
 	position: relative;
 	.input-text {
-		max-width: 260px;
+		min-width: 260px;
 	}
 }
 .input-error {
 	position: absolute;
 	left: 20px;
-	top: -25px;
+	top: -27px;
 	color: #FF5C5C;
 }
 .input-block-padding-right {
@@ -216,7 +241,7 @@ h2 {
 	min-width: 160px;
 }
 .fa-phone {
-	font-size: 18px !important;
+	font-size: 24px !important;
 }
 .fa-envelope {
 	font-size: 18px !important;
@@ -242,6 +267,7 @@ h2 {
 	background: #F2F2F2;
 	display: inline-block;
 	margin-right: 25px;
+	margin-left: -2px;
 }
 .checkbox-block {
 	margin-bottom: 20px;
@@ -249,15 +275,15 @@ h2 {
 	padding-top: 2px;
 }
 .checkbox-input:checked + .checkbox-label:after {
-	width: 18px;
-	height: 10px;
+	width: 20px;
+	height: 14px;
 	content: "";
 	display: inline-block;
-	border-left: 3px solid #231f20;
-	border-bottom: 3px solid #231f20;
+	border-left: 4px solid #231f20;
+	border-bottom: 4px solid #231f20;
 	position: absolute;
-	left: 23px;
-	top: 22px;
+	left: 19px;
+	top: 20px;
 	-webkit-transform: rotate(-45deg);
 	   -moz-transform: rotate(-45deg);
 	    -ms-transform: rotate(-45deg);
@@ -274,7 +300,7 @@ h2 {
 .textarea {
 	width: 100%;
 	height: 160px;
-	padding: 20px;
+	padding: 17px 20px;
 	border: none;
 	background: #f2f2f2;
 	resize: none;
@@ -323,9 +349,11 @@ h2 {
 	font-size: 21px;
 	font-weight: bold;
 	text-transform: uppercase;
+	
 	a {
 		color: #000;
 		text-decoration: none;
+		margin-left: 12px;
 	}
 }
 .footer {
@@ -342,10 +370,15 @@ h2 {
 	        align-items: center;
 }
 .social {
+	position: relative;
+	left: -10px;
 	.btn {
-		line-height: 58px;
+		line-height: 50px;
+		height: 48px;
+		min-width: 47px;
+		margin: 1px 2px 0 0;
 		i {
-			font-size: 18px !important;
+			font-size: 21px !important;
 		}
 	}
 }
