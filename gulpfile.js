@@ -2,10 +2,15 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create();
 
-
 gulp.task('html', function() {
   return gulp.src('src/*.html')
     .pipe(gulp.dest('distillery-test'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('js', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(gulp.dest('distillery-test/js'))
     .pipe(browserSync.stream());
 });
 
@@ -36,6 +41,4 @@ gulp.task('watch', function() {
   gulp.watch(['src/img/*.png','src/img/*.jpg','src/img/*.svg'], ['img']);
 });
 
-
-
-gulp.task('default', ['sass','html','img','browser-sync','watch']);
+gulp.task('default', ['sass','html','img','js','browser-sync','watch']);
