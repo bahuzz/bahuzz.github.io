@@ -41,7 +41,6 @@ let game = {
 
     async sendResults() {
         let data = JSON.stringify({winner:this.winner, date:this.date});
-        console.log(data);
         await fetch('https://starnavi-frontend-test-task.herokuapp.com/winners', {
             method: 'post',
             headers: {
@@ -141,7 +140,6 @@ let game = {
             this.sendMsg(`Congratulations, ${this.user}! You WIN!`);
             this.winner = this.user;
             this.winTime();
-            console.log(this.date);
             this.sendResults();
             this.playAgain();
         };
