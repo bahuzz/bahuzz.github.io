@@ -111,7 +111,6 @@ let game = {
     
         item.classList.add('gameboard__item--active');
         this.usedFields.push(id);
-        console.log(this.usedFields, this.userScore, this.computerScore);
     } ,
 
     winTime() {
@@ -119,6 +118,7 @@ let game = {
         let d = new Date();
         let hours = d.getHours();
         let minutes = d.getMinutes();
+        minutes = (minutes < 10 ? '0' : '') + minutes; 
         let day = d.getDate();
         let month = d.getMonth();
         let year = d.getFullYear();
@@ -141,6 +141,7 @@ let game = {
             this.sendMsg(`Congratulations, ${this.user}! You WIN!`);
             this.winner = this.user;
             this.winTime();
+            console.log(this.date);
             this.sendResults();
             this.playAgain();
         };
