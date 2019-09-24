@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dots</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="controls">
+                    <select class="select mode">
+                        <option value="default" selected disabled>Pick up mode</option>
+                        <option value="easy">Easy</option>
+                        <option value="normal">Normal</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <input type="text" class="controls__input" id="userName" placeholder="Enter your name" />
+                    <button class="button play" disabled>Play</button>
+                </div>
+
+                <div class="message">Enter your name and choose mode, please!</div>
+                
+                <div class="gameboard" id="gameBoard">
+                    <div class="gameboard__row">
+                            <div class="gameboard__item" id="1"></div>
+                            <div class="gameboard__item" id="2"></div>
+                            <div class="gameboard__item" id="3"></div>
+                    </div>
+                    <div class="gameboard__row">
+                            <div class="gameboard__item" id="4"></div>
+                            <div class="gameboard__item" id="5"></div>
+                            <div class="gameboard__item" id="6"></div>
+                    </div>
+                    <div class="gameboard__row">
+                            <div class="gameboard__item" id="7"></div>
+                            <div class="gameboard__item" id="8"></div>
+                            <div class="gameboard__item" id="9"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="sidebar">
+            <h1>Leader Board</h1>
+            <table class="leaders">
+            </table>
+        </div>
+    </div>
+   
+    
+    <script src="app.js"></script>
+</body>
+</html>
