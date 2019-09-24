@@ -17,7 +17,7 @@ let game = {
     userInput: document.getElementById('userName'),
 
     async getSettings(mode) {
-        await fetch("http://starnavi-frontend-test-task.herokuapp.com/game-settings")
+        await fetch("https://starnavi-frontend-test-task.herokuapp.com/game-settings")
             .then(res => res.json())
             .then(data => {
                 if(mode == 'easy') {
@@ -42,7 +42,7 @@ let game = {
     async sendResults() {
         let data = JSON.stringify({winner:this.winner, date:this.date});
         console.log(data);
-        await fetch('http://starnavi-frontend-test-task.herokuapp.com/winners', {
+        await fetch('https://starnavi-frontend-test-task.herokuapp.com/winners', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -198,7 +198,7 @@ let game = {
     getWinners() {
         let table = document.querySelector('.leaders');
         let leaders ='';
-        fetch("http://starnavi-frontend-test-task.herokuapp.com/winners")
+        fetch("https://starnavi-frontend-test-task.herokuapp.com/winners")
             .then(res => res.json())
             .then(data => { data.map(item => {
                 leaders += `<tr><td>${item.winner}</td><td>${item.date}</td></tr>`
